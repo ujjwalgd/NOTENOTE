@@ -37,7 +37,7 @@ exports.dashboard = async (req, res) => {
                         userName: req.user.firstName,
                         notes,
                         locals,
-                        layout: '../views/layouts/dashboard',
+                        layout: '../../views/layouts/dashboard',
                     });
 
                 })
@@ -66,7 +66,7 @@ exports.ViewNote = async (req, res) => {
         res.render('layouts/dashboard/view-note', {
             noteID: req.params.id,
             note,
-            layout: '../views/layouts/dashboard'
+            layout: '../../views/layouts/dashboard'
         });
     } else {
         res.send('something went wrong');
@@ -98,7 +98,7 @@ exports.UpdateNote = async (req, res) => {
 
 exports.createNewNote = async (req, res) => {
     res.render('layouts/dashboard/create-note', {
-        layout: '../views/layouts/dashboard'
+        layout: '../../views/layouts/dashboard'
     });
 }
 
