@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <title><%- locals.title %></title>
+    <meta name="description" content="<%- locals.description %>">
+</head>
+
+<body>
+    <div class="nav">
+        <div class="logo">
+            <a href="/">
+                <h1>NOTENOTE</h1>
+            </a>
+        </div>
+        <div class="navMenus">
+            <a href="/aboutus">AboutUs</a>
+            <a href="/donate">Donate</a>
+            <a href="/logout">LogOut</a>
+        </div>
+    </div>
+    <%- body %>
+        <%- include('../partials/footer.ejs')%>
+</body>
+
+</html>

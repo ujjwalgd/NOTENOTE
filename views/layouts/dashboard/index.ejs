@@ -1,0 +1,37 @@
+<div class="container">
+    <h1>Hello !!! <%= userName %>
+    </h1>
+</div>
+
+<div class="createNoteContainer">
+
+    <a href="/dashboard/newNote">+ New Note</a>
+
+</div>
+
+<div class="notesContainer">
+    <% if(notes.length>0){ for(var i=0; i< notes.length; i++){ %>
+            <div class="noteContainer">
+                <a href="/dashboard/item/<%= notes[i]._id %>">
+                    <div class="noteHeading">
+                        <h4>
+                            <%= notes[i].title %>
+                        </h4>
+                    </div>
+
+                    <div class="noteBody">
+                        <p>
+                            <%= notes[i].body %>
+                        </p>
+                    </div>
+                </a>
+            </div>
+
+
+
+            <% }}else{ %>
+                <div class="ifNoNotes">
+                    <h1> No Notes 🥲</h1>
+                </div>
+                <% } %>
+</div>

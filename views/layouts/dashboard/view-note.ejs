@@ -1,0 +1,25 @@
+<div class="viewingNoteContainer">
+    <div class="viewInfo">
+        <h1>This is "<%= note.title %>" Note</h1>
+    </div>
+    <div>
+        <form action="/dashboard/item-delete/<%= noteID %>?_method=DELETE" method="POST">
+            <button type="submit">Delete</button>
+        </form>
+    </div>
+    <div class="viewNoteCenter">
+        <form action="/dashboard/item/<%= noteID %>?_method=PUT" method="POST">
+            <div class="titleAndBody">
+                <div class="viewingNoteTitle">
+                    <input type="text" id="title" name="title" value="<%= note.title %>" placeholder="Title">
+                </div>
+                <div class="viewingNoteBody">
+                    <textarea type="text" id="body" name="body" placeholder="Take a Note..." rows="16"><%= note.body %>
+                    </textarea>
+                </div>
+            </div>
+            <button type="submit" value="Save" class="updateButton">Save</button>
+        </form>
+    </div>
+
+</div>

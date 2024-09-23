@@ -1,0 +1,92 @@
+:root {
+    --color-1: #323437;
+    --color-2: #ffffff;
+    --color-3: #db416a;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-1);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+        a {
+            text-decoration: none;
+            color: var(--color-2);
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 20px;
+        }
+
+        margin-left: 10vw;
+    }
+
+    .navMenus {
+        a {
+            text-decoration: none;
+            font-family: "Poppins", system-ui;
+            font-weight: 400;
+            font-size: 16px;
+            font-style: normal;
+            color: var(--color-2);
+            margin-right: 20px;
+            transition: 0.2s;
+        }
+
+        a:hover {
+            color: var(--color-3);
+        }
+
+        a:last-child {
+            margin-right: 10vw;
+        }
+
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        margin-top: 234px;
+        font-family: "Poppins", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        color: var(--color-2);
+        font-size: 68px;
+    }
+
+    button {
+        height: 50px;
+        width: 140px;
+        background-color: transparent;
+        border: var(--color-2) 2px solid;
+        border-radius: 40px;
+        font-family: "Poppins", system-ui;
+        font-weight: 400;
+        font-size: 22px;
+        color: var(--color-2);
+        transition: 0.2s;
+    }
+
+    button:hover {
+        background-color: var(--color-3);
+    }
+
+    p {
+        font-family: "Poppins", system-ui;
+        font-weight: 400;
+        font-size: 14px;
+        color: var(--color-2);
+    }
+}

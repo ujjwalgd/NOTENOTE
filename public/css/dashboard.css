@@ -1,0 +1,274 @@
+:root {
+    --color-1: #323437;
+    --color-2: #ffffff;
+    --color-3: #db416a;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-1);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+        a {
+            text-decoration: none;
+            color: var(--color-3);
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 20px;
+        }
+
+        margin-left: 10vw;
+    }
+
+    .navMenus {
+        a {
+            text-decoration: none;
+            font-family: "Poppins", system-ui;
+            font-weight: 400;
+            font-size: 16px;
+            font-style: normal;
+            color: var(--color-2);
+            margin-right: 20px;
+            transition: 0.2s;
+        }
+
+        a:hover {
+            color: var(--color-3);
+        }
+
+        a:last-child {
+            margin-right: 10vw;
+        }
+
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    h1 {
+        font-family: "Poppins", system-ui;
+        font-weight: 400;
+        font-size: 20px;
+        font-style: normal;
+        color: var(--color-2);
+    }
+}
+
+.createNoteContainer {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 60px 0;
+
+
+    a {
+        text-decoration: none;
+        font-family: "Poppins", system-ui;
+        font-weight: 400;
+        font-size: 16px;
+        color: var(--color-3);
+    }
+}
+
+.notesContainer {
+    columns: 300px;
+    margin: 0 100px 0 100px;
+
+    .noteContainer {
+        -webkit-column-break-inside: avoid;
+        page-break-inside: avoid;
+        break-inside: avoid;
+        border: 2px var(--color-3) solid;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+
+        a {
+            text-decoration: none;
+
+            .noteHeading {
+
+                h4 {
+                    text-align: center;
+                    color: var(--color-2);
+                    font-family: "Bebas Neue", sans-serif;
+                    font-weight: 400;
+                    font-style: normal;
+                    font-size: 26px;
+                    margin: 15px 0 0 0;
+                }
+
+            }
+
+            .noteBody {
+                p {
+                    font-family: "Poppins", system-ui;
+                    font-weight: 400;
+                    font-size: 16px;
+                    font-style: normal;
+                    color: var(--color-2);
+                    margin: 15px 5px 5px 5px;
+                }
+
+            }
+        }
+
+    }
+
+    .ifNoNotes {
+        width: 100vw;
+
+        h1 {
+
+            color: var(--color-3);
+            font-family: "Poppins", system-ui;
+            font-weight: 800;
+            font-size: 70px;
+            font-style: normal;
+            text-align: center;
+        }
+    }
+}
+
+.viewingNoteContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    form {
+        width: 750px;
+
+        button {
+            background-color: var(--color-3);
+            color: var(--color-1);
+            font-family: "Poppins", system-ui;
+            font-weight: 400;
+            font-size: 16px;
+            font-style: normal;
+            border: none;
+            border-radius: 25px;
+            height: 40px;
+            width: 100px;
+            float: right;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            color: var(--color-2);
+        }
+
+    }
+
+    .viewInfo {
+        margin-top: 30px;
+        text-align: center;
+        width: 60vw;
+
+        h1 {
+            font-family: "Poppins", system-ui;
+            font-weight: 400;
+            font-size: 20px;
+            font-style: normal;
+            color: var(--color-3);
+        }
+    }
+
+    .viewNoteCenter {
+        width: 750px;
+
+        form {
+
+            .titleAndBody {
+
+                margin-top: 10px;
+                border: 2px var(--color-3) solid;
+                border-radius: 10px;
+                overflow: hidden;
+
+                .viewingNoteTitle {
+                    input {
+                        padding-left: 50px;
+                        width: 100%;
+                        height: 80px;
+                        color: var(--color-2);
+                        font-family: "Bebas Neue", sans-serif;
+                        font-weight: 400;
+                        font-style: normal;
+                        font-size: 26px;
+                        margin: 0;
+                        border: none;
+                        background-color: var(--color-3);
+                    }
+
+                    input:focus {
+                        outline-width: 0;
+                    }
+
+                    input::placeholder {
+                        color: var(--color-1);
+                    }
+                }
+
+                .viewingNoteBody {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    textarea {
+                        resize: none;
+                        width: 95%;
+                        font-family: "Poppins", system-ui;
+                        font-weight: 400;
+                        font-size: 16px;
+                        font-style: normal;
+                        color: var(--color-2);
+                        margin: 10px 0 0 0;
+                        border: none;
+                        background-color: var(--color-1);
+                    }
+
+                    textarea:focus {
+                        outline-width: 0;
+                    }
+
+                    textarea::placeholder {
+                        color: var(--color-2);
+                    }
+                }
+
+            }
+
+            .updateButton {
+                background-color: var(--color-3);
+                color: var(--color-1);
+                font-family: "Poppins", system-ui;
+                font-weight: 400;
+                font-size: 16px;
+                font-style: normal;
+                border: none;
+                border-radius: 25px;
+                height: 40px;
+                width: 100px;
+                float: right;
+                margin: 10px 0 0 0;
+                transition: 0.2s;
+            }
+
+            .updateButton:hover {
+                color: var(--color-2);
+            }
+
+        }
+    }
+}
