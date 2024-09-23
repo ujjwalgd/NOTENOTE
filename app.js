@@ -40,9 +40,9 @@ app.set('layout', './layouts/main');
 app.set('view engine', 'ejs');
 
 //Routes
-app.use('/', require('./server/routes/index'));
-app.use('/', require('./server/routes/dashboard'));
-app.use('/', require('./server/routes/auth'));
+app.use('/', require('server/routes/index'));
+app.use('/', require('server/routes/dashboard'));
+app.use('/', require('server/routes/auth'));
 
 
 //Handle 404
