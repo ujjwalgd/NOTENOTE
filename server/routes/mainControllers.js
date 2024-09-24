@@ -31,4 +31,3 @@ exports.coko = async (req, res) => {
 
     res.render('coko', locals);
 }
-
