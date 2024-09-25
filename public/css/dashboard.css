@@ -82,7 +82,7 @@ body {
 
 .notesContainer {
     columns: 300px;
-    margin: 0 100px 0 100px;
+    margin: 0 10vw 0 10vw;
 
     .noteContainer {
         -webkit-column-break-inside: avoid;
@@ -127,7 +127,7 @@ body {
     }
 
     .ifNoNotes {
-        width: 100vw;
+        width: 80vw;
 
         h1 {
 
