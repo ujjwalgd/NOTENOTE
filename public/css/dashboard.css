@@ -92,7 +92,8 @@ body {
         border-radius: 10px;
         display: flex;
         flex-direction: column;
-        margin: 20px;
+        margin: 10px;
+        margin-top: 0;
 
         a {
             text-decoration: none;
@@ -147,7 +148,6 @@ body {
     align-items: center;
 
     form {
-        width: 750px;
 
         button {
             background-color: var(--color-3);
@@ -269,6 +269,36 @@ body {
                 color: var(--color-2);
             }
 
+        }
+    }
+}
+
+/* for responsive */
+
+@media screen and (max-width:767px) {
+
+    .nav {
+        flex-direction: column;
+
+        .logo {
+            margin-left: 0;
+        }
+
+        .navMenus {
+            a {
+                margin-right: 0;
+                margin: 5px
+            }
+
+            a:last-child {
+                margin: 0;
+            }
+        }
+    }
+
+    .viewingNoteContainer {
+        .viewNoteCenter {
+            width: 85vw;
         }
     }
 }

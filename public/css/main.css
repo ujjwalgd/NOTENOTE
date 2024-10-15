@@ -57,36 +57,148 @@ body {
     justify-content: center;
     align-items: center;
 
+    img {
+        margin-top: 50px;
+        height: 350px;
+        animation: randomMove 20s infinite;
+    }
+
     h1 {
-        margin-top: 234px;
+
+        margin-top: 0;
+        margin-bottom: 30px;
         font-family: "Poppins", system-ui;
         font-weight: 400;
         font-style: normal;
-        color: var(--color-2);
-        font-size: 68px;
+        color: transparent;
+        font-size: 24px;
+        background-image: linear-gradient(45deg, var(--color-3), #dd5858);
+        background-clip: text;
+
+
     }
 
-    button {
-        height: 50px;
-        width: 140px;
-        background-color: transparent;
-        border: var(--color-2) 2px solid;
-        border-radius: 40px;
-        font-family: "Poppins", system-ui;
-        font-weight: 400;
-        font-size: 22px;
-        color: var(--color-2);
-        transition: 0.2s;
+    a {
+        position: relative;
+
+        button {
+            height: 50px;
+            width: 140px;
+            background-color: transparent;
+            border: var(--color-2) 2px solid;
+            border-radius: 40px;
+            font-family: "Poppins", system-ui;
+            font-weight: 400;
+            font-size: 22px;
+            color: var(--color-2);
+            transition: 0.2s;
+            cursor: pointer;
+        }
+
+        button::before,
+        button::after {
+            content: '';
+            position: absolute;
+            animation: float 4s infinite;
+            background-image: linear-gradient(-45deg, #4e4b9f70 10%, #11223229 90%);
+            border: solid #ffffff55 2px;
+            border-radius: 10px;
+            backdrop-filter: blur(2px);
+        }
+
+        button::before {
+            left: -20px;
+            width: 30px;
+            height: 20px;
+
+        }
+
+        button::after {
+            right: -20px;
+            width: 30px;
+            height: 40px;
+            animation-delay: 0.8s;
+        }
+
+        button:hover {
+            background-color: var(--color-3);
+        }
     }
 
-    button:hover {
-        background-color: var(--color-3);
-    }
+
+
 
     p {
         font-family: "Poppins", system-ui;
         font-weight: 400;
         font-size: 14px;
         color: var(--color-2);
+    }
+
+
+}
+
+/* animations */
+
+
+@keyframes float {
+    50% {
+        transform: translateY(20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes randomMove {
+
+    25% {
+        transform: translate(-20px, -12px) scale(1.2);
+    }
+
+    50% {
+        transform: translate(-18px, 9px) scale(0.95);
+
+
+    }
+
+    75% {
+        transform: translate(16px, -11px) scale(1.1);
+
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1);
+
+    }
+}
+
+/* for responsive */
+
+@media screen and (max-width:767px) {
+
+    .nav {
+
+        .logo {
+            margin-left: 10px;
+        }
+
+        .navMenus {
+            a:last-child {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .container {
+        img {
+            height: 200px;
+        }
+
+        h1 {
+            font-size: 20px;
+        }
     }
 }
